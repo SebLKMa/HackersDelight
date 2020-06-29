@@ -47,7 +47,7 @@ Go back to Kali VM to plan, prepare and attack a victim.
 **Recce phase**
 1. Where and what am I? (What is my IP?)  
 ```sh
-kali@kali:~$ hostname -I
+$ hostname -I
 192.168.234.128
 ```
 
