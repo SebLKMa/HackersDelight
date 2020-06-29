@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+        <title>HTML and CSS "Hello people"</title>
+        <style>
+        /* CSS is how you style HTML elements. Let's break this bit of CSS down:*/
+                body {
+                        background-color: #2D2D2D;
+                }
+                /* The first part (body) is a "selector". This is the part of a CSS statment that tells the browser what to
+                apply the styling to. In this case, we will be styling the background color of the <body> tag that begins on
+                line 61.
+
+                Then, inside the curly brackets, and before the colon, we have the "property". There are a LOT of different
+                CSS properties, here's a pretty full list: http://css-tricks.com/almanac/properties/.
+
+                After the property, we have the value. Depending on the property, this could be a Hex color code, a px
+                value, or even some other weird stuff.
+
+                Always remember to place a colon between the property ("background-color") and the value ("#2D2D2D"), then
+                put a semicolon after the value and before the next property (if you have more than one). */
+
+                /* Here's some more CSS, feel free to mess with it! */
+                h1 {
+                        color: #C26356; /* setting the text color */
+                        font-size: 30px; /* setting the size of the font */
+                        font-family: Menlo, Monaco, fixed-width;
+                }
+
+                /* rounded corner box */
+                #rcorners {
+                        border-radius: 25px;
+                        border: 2px solid #73AD21;
+                        padding: 20px;
+                        width: 600px;
+                        height: 200px;
+                }
+
+                /* You will notice that the font-family property has a fancy value. This allows you to set your preferred
+                font, followed by a list of comma seperated fall-backs in case the host computer does not have the preferred
+                font installed. In this case, I'm telling it to use Menlo, but if it doesn't have that font, to use Monaco,
+                and if it doesn't have that one, to just used any fixed-width font. */
+
+                /* Now, I'll style the <p> tag */
+                p {
+                        color: rgb(199, 241, 143);
+                        font-family: "Lucida Console", Monaco, monospace, fixed-width;
+                }
+                g {
+                        color: white;
+            font-family: "Source Code Pro", Menlo, Monaco, fixed-width;
+                }
+                /* line indentation */
+                div.indent0 {
+                        text-indent: 0%;
+                }
+                div.indent2 {
+                        text-indent: 2%;
+                }
+                div.indent4 {
+                        text-indent: 4%;
+                }
+                div.indent6 {
+                        text-indent: 6%;
+                }
+                div.indent8 {
+                        text-indent: 8%;
+                }
+        </style>
+
+<!-- Back to HTML comments! We have now put everything we need in the <head> tag, so let's close it... -->
+</head>
+
+<!-- ...and open the <body> tag. Inside it is where we place the actual content, hurray! -->
+<body>
+
+        <!-- Let's start the page with a <h1>. h1 signifies that this is the main "header" for the page, and should briefly
+        describe the content of the page.-->
+        <h1>Our HTTP Server</h1>
+
+        <!-- Now, we will write a paragraph of text. Because this is just a normal paragraph, will will wrap it in the <p>
+        tag (p is for paragraph). -->
+        <g>Version: {{.AppVersion}} is up and running...</g>
+
+    <p id="rcorners">
+            <marquee behavior="scroll" direction="down">
+            
+                <div class="indent0">
+                    MemoryPage& MemoryPage::operator=(const MemoryPage& other)
+                </div>
+            
+                <div class="indent0">
+                    {
+                </div>
+                <div class="indent2">
+                            if (this != &other) // prevent assignment to self
+                </div>
+                <div class="indent2">
+                            {
+                </div>
+                <div class="indent4">
+                                    // first de-allocate current
+                </div>
+                <div class="indent4">
+                                    delete [] m_pBuf;
+                </div>
+                <div class="indent4">
+                                    m_pBuf = nullptr;
+                </div>
+                <div class="indent4">
+                                    m_Size = 0;
+                </div>
+                <br>
+                <div class="indent4">
+                                    // codes as copy ctor
+                </div>
+                <div class="indent4">
+                                    m_Size = other.m_Size;
+                </div>
+                <div class="indent4">
+                                    m_pBuf = new char[m_Size];
+                </div>
+                
+                <div class="indent4">
+                                    for (size_t i = 0; i&lt;m_Size; i++)
+                </div>                
+                
+                <div class="indent4">
+                                    {
+                </div>
+                <div class="indent6">
+                                            m_pBuf[i] = other.m_pBuf[i];
+                </div>
+                <div class="indent4">
+                                    }
+                </div>
+                <br>
+                <div class="indent2">
+                            }
+                </div>
+                <br>
+                <div class="indent2">
+                            logMessage("MemoryPage assignment operator");
+                </div>
+                <div class="indent2">
+                            return *this;
+                </div>
+                <div class="indent0">
+                    }
+                </div>
+            
+            </marquee>
+        
+    </p>
+
+</body>
+</html>
+
