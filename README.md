@@ -28,7 +28,7 @@ $ hostname -I
 192.168.234.129
 ```
 
-Go to the `httpserver` directory, do `chmod +x httpserver` of the binary is not executable.  
+Go to the `httpserver` directory, do `chmod +x httpserver` if the binary is not executable.  
 Then run the server.  
 ```sh
 $ ./httpserver 
