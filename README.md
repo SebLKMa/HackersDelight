@@ -40,6 +40,8 @@ $ ./httpserver
 ### Laptop Firefox browser
 From your laptop, use Firefox to access the HTTP server, `http://192.168.234.129:8288/hello`
 
+![httpserver demo](media/httpserver_hello.gif)
+
 ### Kali VM - The Attacker
 
 Go back to Kali VM to plan, prepare and attack a victim.  
@@ -152,4 +154,6 @@ $ ./httpserver
 ```
 
 *6. From your laptop, use Firefox to re-access the HTTP server, `http://192.168.234.129:8288/hello`, it waits and hangs.*  
+
+![httpserver timeout](media/httpserver_timeout.JPG)
 
